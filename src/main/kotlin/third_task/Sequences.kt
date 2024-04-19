@@ -26,7 +26,7 @@ fun sequence(list: List<Double?>): Double {
         .asSequence()
         .filter { it.toInt() % 2 == 0 }
         .map { it.pow(2) }
-        .filter { it <= 25.0 } //todo: когда заменят примеры проверить нужно ли = и заменить в ридми если надо
+        .filter { it <= 25.0 }
         .toList()
 
     val wholeList = odd + even
@@ -36,9 +36,6 @@ fun sequence(list: List<Double?>): Double {
         .sortedByDescending { it }
         .take(10)
         .sum()
-
-    //val a = "%.2f".format(sum).replace(',', '.')
-    //println(a.toDouble()) - решение если нужно точно 2 знака после . + возможно нужна проверка если там ,?
 
     return round(sum * 100) / 100
 }
